@@ -1,0 +1,22 @@
+@startuml ÇalışmaPlanı
+title Hız Testi Uygulaması Çalışma Planı
+class HizTesti{
+    +secim:int
+    +IslemYap()
+}
+
+package "Imports" {
+    class speedtest
+    class pyfiglet
+    class requests
+    class socket
+}
+
+HizTesti ..> speedtest : Kullanılıyor
+HizTesti ..> pyfiglet : Kullanılıyor
+HizTesti ..> requests : Kullanılıyor
+HizTesti ..> socket : Kullanılıyor
+
+
+hide empty members
+@enduml
