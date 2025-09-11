@@ -29,13 +29,17 @@ class HizTesti:
 
                 print(f"İndirme hızı: {dowloand} MB/S \nYükleme hızı: {upload} MB/S \nPing: {ping} MS") 
                 input("Çıkmak için herhangi bir tuşa basınız.")
-            except :
+            except Exception as e:
+                print(e)
                 print("Bir hata oluştu lütfen internet bağlantınızı kontrol edip tekrar deneyiniz.")
 
         else:
             print("Çıkış yapılıyor.")
 
-    print(pyfiglet.figlet_format("HOŞGELDİNİZ\n"))
-    secim = input("1/Hız Testi \nYapmak istediğiniz işlemi seçiniz: ")
-    IslemYap(int(secim))
+print(pyfiglet.figlet_format("HOŞGELDİNİZ\n"))
+secim = input("1/Hız Testi \nYapmak istediğiniz işlemi seçiniz: ")
+if secim == "1":
+    HizTesti.IslemYap(1)
+else:
+    print("Lütfen sadece rakam giriniz! ")
     
